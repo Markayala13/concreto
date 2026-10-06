@@ -179,7 +179,7 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <div class="split">
       <div class="split-img reveal">
-        <div class="split-ph"><svg fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 48 48"><path d="M6 30h36M6 30l6-14h24l6 14M6 30v8h36v-8M14 16v-4h20v4"></path></svg></div>
+        <img src="/sites/rubioconcrete/why.jpg" alt="Finished red stamped concrete driveway by M.A.N in the Omaha metro">
         <div class="stamp"><b>M.A.N</b><small data-es="Concreto y&lt;br&gt;Paisajismo" data-en="Concrete &amp;amp;&lt;br&gt;Landscaping">Concrete &amp;<br>Landscaping</small></div>
       </div>
       <div>

@@ -10,6 +10,9 @@
   --paper: #ffffff;      /* white page background */
 }
 
+/* Slow the services marquee down (base runs at 34s — too fast) */
+.marq-track { animation-duration: 64s; }
+
 /* Hero: looping muted video over the dark base */
 .hero-bg { background: var(--ink); }
 .hero-bg video {
