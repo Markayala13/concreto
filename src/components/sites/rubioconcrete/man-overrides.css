@@ -1,0 +1,109 @@
+/* ============================================================
+   M.A.N Concrete and Landscaping — brand overrides
+   Layered on top of the base (cloned) stylesheet.
+   Palette: dark red + black + white. Omaha, NE.
+   ============================================================ */
+
+:root {
+  --red: #8a1619;        /* dark red */
+  --red-deep: #5c0d10;   /* darker red (hover) */
+  --paper: #ffffff;      /* white page background */
+}
+
+/* Hero: looping muted video over the dark base */
+.hero-bg { background: var(--ink); }
+.hero-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+}
+
+/* Final CTA keeps its dark base (no photo yet) */
+.final-bg { background: var(--ink); }
+
+/* ---------- Typographic wordmark (replaces the logo image) ---------- */
+.brand .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40px;
+  line-height: 1;
+}
+.brand .logo-man {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: .04em;
+  color: #fff;
+}
+.brand .logo-man .d { color: var(--red); }
+.brand .logo-sub {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .54rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--concrete-300);
+  margin-top: 4px;
+}
+.brand .logo-sub b { color: var(--red); font-weight: 700; }
+
+/* Footer wordmark variant */
+.foot .logo { height: auto; margin-bottom: 20px; }
+.foot .logo-man { font-size: 1.75rem; }
+
+/* ---------- Image placeholders (swap in real M.A.N photos later) ---------- */
+.split-img .split-ph {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: repeating-linear-gradient(45deg, #242421 0 16px, #1d1d1b 16px 32px);
+  display: grid;
+  place-items: center;
+}
+.split-img .split-ph svg {
+  width: 64px; height: 64px;
+  stroke: var(--concrete-700); stroke-width: 1.2; fill: none; opacity: .85;
+}
+
+.gal .ph {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: repeating-linear-gradient(45deg, #2a2a28 0 14px, #232321 14px 28px);
+  display: grid;
+  place-items: center;
+}
+.gal .ph svg {
+  width: 42px; height: 42px;
+  stroke: var(--concrete-300); stroke-width: 1.3; fill: none; opacity: .45;
+}
+
+/* Gallery captions always visible on touch devices (no hover) */
+@media (hover: none) {
+  .gal figcaption { opacity: 1; transform: none; }
+}
+
+/* ---------- Mobile polish ---------- */
+/* Keep the gallery at 2 columns on phones (base CSS drops to 1 = giant images) */
+@media (max-width: 620px) {
+  .gal { columns: 2; column-gap: 10px; }
+  .gal figure { margin-bottom: 10px; }
+  .gal figcaption { padding: 9px 10px; font-size: 0.6rem; letter-spacing: 0.03em; }
+}
+@media (max-width: 360px) {
+  .gal { columns: 1; }
+}
+
+/* Hero headline: shrink so "foundation." never bleeds off small screens */
+@media (max-width: 560px) {
+  .hero h1 { font-size: clamp(2.1rem, 8.5vw, 3.4rem); }
+  /* Tag eyebrow shouldn't break "Omaha, NE" onto its own line */
+  .hero .tag { font-size: 0.66rem; letter-spacing: 0.1em; }
+}
+
+/* Form inputs must be >= 16px so iOS Safari doesn't zoom in on focus */
+@media (max-width: 768px) {
+  .field input,
+  .field select,
+  .field textarea { font-size: 16px; }
+}
