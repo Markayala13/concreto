@@ -13,6 +13,17 @@
 /* Slow the services marquee down (base runs at 34s — too fast) */
 .marq-track { animation-duration: 64s; }
 
+/* Keep the marquee ticker scrolling even when the device prefers reduced motion
+   (base CSS stops it, which left the page feeling static on phones with that setting). */
+@media (prefers-reduced-motion: reduce) {
+  .marq-track {
+    animation: scroll 64s linear infinite !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    width: max-content !important;
+  }
+}
+
 /* Hero: looping muted video over the dark base */
 .hero-bg { background: var(--ink); }
 .hero-bg video {

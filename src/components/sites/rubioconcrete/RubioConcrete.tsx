@@ -116,11 +116,19 @@ export function RubioConcrete() {
       }
     }
 
-    // --- hero video: honor reduced-motion ---------------------------------
+    // --- hero video: force play (muted ambient loop) so it never sits frozen,
+    //     including on phones with reduced-motion or strict autoplay policies.
     const heroVid = d.querySelector<HTMLVideoElement>(".hero-video");
-    if (heroVid && reduce) {
-      heroVid.removeAttribute("autoplay");
-      heroVid.pause();
+    if (heroVid) {
+      heroVid.muted = true;
+      heroVid.setAttribute("muted", "");
+      const tryPlay = () => {
+        const p = heroVid.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      };
+      tryPlay();
+      heroVid.addEventListener("canplay", tryPlay, { once: true });
+      heroVid.addEventListener("loadeddata", tryPlay, { once: true });
     }
 
     // --- estimate forms: POST to send.php, mailto fallback ----------------
