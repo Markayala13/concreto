@@ -22,6 +22,14 @@
     white-space: nowrap !important;
     width: max-content !important;
   }
+  /* Re-enable the gentle scroll-reveal fade (base CSS disables it under
+     reduced-motion, which left sections appearing with no animation on phones
+     that have that OS setting on). */
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
 }
 
 /* Hero: looping muted video over the dark base */

@@ -53,11 +53,9 @@ export function RubioConcrete() {
     }
 
     // --- reveal on scroll -------------------------------------------------
-    const reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
     const reveals = Array.from(d.querySelectorAll<HTMLElement>(".reveal"));
     let io: IntersectionObserver | null = null;
-    let failsafe: number | undefined;
-    if (reduce || !("IntersectionObserver" in window)) {
+    if (!("IntersectionObserver" in window)) {
       reveals.forEach((e) => e.classList.add("in"));
     } else {
       io = new IntersectionObserver(
@@ -72,7 +70,6 @@ export function RubioConcrete() {
         { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
       );
       reveals.forEach((e) => io!.observe(e));
-      failsafe = window.setTimeout(() => reveals.forEach((e) => e.classList.add("in")), 2500);
     }
 
     // --- animated number counters ----------------------------------------
@@ -81,10 +78,6 @@ export function RubioConcrete() {
       const target = parseFloat(el.getAttribute("data-count") || "0");
       const suffix = el.getAttribute("data-suffix") || "";
       const prefix = el.getAttribute("data-prefix") || "";
-      if (reduce) {
-        el.textContent = prefix + target + suffix;
-        return;
-      }
       const dur = 1400;
       const start = performance.now();
       const step = (now: number) => {
@@ -98,7 +91,7 @@ export function RubioConcrete() {
     };
     let countObs: IntersectionObserver | null = null;
     if (counters.length) {
-      if (reduce || !("IntersectionObserver" in window)) {
+      if (!("IntersectionObserver" in window)) {
         counters.forEach(runCount);
       } else {
         countObs = new IntersectionObserver(
@@ -256,7 +249,6 @@ export function RubioConcrete() {
       mnavLinks.forEach((a) => a.removeEventListener("click", onLink));
       io?.disconnect();
       countObs?.disconnect();
-      if (failsafe) window.clearTimeout(failsafe);
       langHandlers.forEach(([b, h]) => b.removeEventListener("click", h));
     };
   }, []);
