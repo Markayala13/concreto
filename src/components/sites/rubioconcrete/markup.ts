@@ -13,11 +13,12 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
 <header class="header" id="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="M.A.N Concrete and Landscaping — home">
-      <span class="logo"><span class="logo-man">M<span class="d">.</span>A<span class="d">.</span>N</span><span class="logo-sub">Concrete <b>&amp;</b> Landscaping</span></span>
+      <span class="logo"><span class="logo-man">M<span class="d">.</span>A<span class="d">.</span>N</span><span class="logo-sub">Concrete <b>&amp;</b> Landscaping LLC</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#services" data-es="Servicios" data-en="Services">Services</a>
       <a href="#work" data-es="Proyectos" data-en="Work">Work</a>
+      <a href="#in-motion" data-es="Videos" data-en="Videos">Videos</a>
       <a href="#process" data-es="Proceso" data-en="Process">Process</a>
       <a href="#why" data-es="Por qué M.A.N" data-en="Why M.A.N">Why M.A.N</a>
       <a href="#areas" data-es="Zonas" data-en="Areas">Areas</a>
@@ -36,6 +37,7 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
 <nav class="mnav" id="mnav" aria-label="Mobile">
   <a href="#services" data-es="Servicios" data-en="Services">Services</a>
   <a href="#work" data-es="Proyectos" data-en="Work">Work</a>
+  <a href="#in-motion" data-es="Videos" data-en="Videos">Videos</a>
   <a href="#process" data-es="Proceso" data-en="Process">Process</a>
   <a href="#why" data-es="Por qué M.A.N" data-en="Why M.A.N">Why M.A.N</a>
   <a href="#areas" data-es="Zonas" data-en="Areas">Areas</a>
@@ -241,6 +243,37 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
   </div>
 </section>
 
+<!-- VIDEO GALLERY -->
+<section class="section" id="in-motion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-es="Video — En obra" data-en="Video — On the job">Video — On the job</span>
+      <h2 class="h-lg" data-es="Concreto en movimiento." data-en="Concrete in motion.">Concrete in motion.</h2>
+      <p class="lead" data-es="Mira a nuestro equipo vaciar, acabar y entregar — proyectos reales de M.A.N en el área de Omaha." data-en="Watch our crew pour, finish, and deliver — real M.A.N projects around the Omaha metro.">Watch our crew pour, finish, and deliver — real M.A.N projects around the Omaha metro.</p>
+    </div>
+    <div class="vidgal reveal">
+      <figure>
+        <video controls preload="metadata" muted loop playsinline>
+          <source src="/sites/rubioconcrete/video/project-1.mp4" type="video/mp4">
+        </video>
+        <figcaption data-es="&lt;b&gt;Vaciado &amp;amp; acabado&lt;/b&gt; · En sitio" data-en="&lt;b&gt;Pour &amp;amp; finish&lt;/b&gt; · On site"><b>Pour &amp; finish</b> · On site</figcaption>
+      </figure>
+      <figure>
+        <video controls preload="metadata" muted loop playsinline>
+          <source src="/sites/rubioconcrete/video/project-2.mp4" type="video/mp4">
+        </video>
+        <figcaption data-es="&lt;b&gt;Manos a la obra&lt;/b&gt; · Equipo M.A.N" data-en="&lt;b&gt;On the job&lt;/b&gt; · M.A.N crew"><b>On the job</b> · M.A.N crew</figcaption>
+      </figure>
+      <figure>
+        <video controls preload="metadata" muted loop playsinline>
+          <source src="/sites/rubioconcrete/video/project-3.mp4" type="video/mp4">
+        </video>
+        <figcaption data-es="&lt;b&gt;Proyecto terminado&lt;/b&gt; · Omaha, NE" data-en="&lt;b&gt;Finished project&lt;/b&gt; · Omaha, NE"><b>Finished project</b> · Omaha, NE</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- STATS -->
 <section class="stats" aria-label="M.A.N Concrete and Landscaping at a glance">
   <div class="wrap">
@@ -325,6 +358,10 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"></path></svg></span>
           (402) 301-2004
         </a>
+        <a href="mailto:ramirezadolfo505@yahoo.com">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg></span>
+          ramirezadolfo505@yahoo.com
+        </a>
         <p class="fs-label" style="margin-top:18px" data-es="Gratis · Respuesta en 24 horas · Se habla español" data-en="Free · 24-hour response · Se habla español">Free · 24-hour response · Se habla español</p>
       </div>
     </div>
@@ -357,7 +394,7 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <span class="logo"><span class="logo-man">M<span class="d">.</span>A<span class="d">.</span>N</span><span class="logo-sub">Concrete <b>&amp;</b> Landscaping</span></span>
+        <span class="logo"><span class="logo-man">M<span class="d">.</span>A<span class="d">.</span>N</span><span class="logo-sub">Concrete <b>&amp;</b> Landscaping LLC</span></span>
         <p class="about" data-es="Concreto y paisajismo de un negocio local en el área de Omaha. Entradas, pisos, muros y acabados — sobre una base sólida, hecho para durar." data-en="Locally owned concrete and landscaping in the Omaha metro. Driveways, floors, walls and finishes — built on a strong foundation, built to last.">Locally owned concrete and landscaping in the Omaha metro. Driveways, floors, walls and finishes — built on a strong foundation, built to last.</p>
         <div class="es-badge">Se Habla Español</div>
       </div>
@@ -377,12 +414,12 @@ export const RUBIO_MARKUP = `<a class="skip" href="#main">Skip to content</a>
       </div>
       <div>
         <h5 data-es="Contacto" data-en="Contact">Contact</h5>
-        <ul><li><a href="tel:+14023012004">(402) 301-2004</a></li><li>Omaha, NE</li><li data-es="Cotizaciones gratis · Se habla español" data-en="Free estimates · Se habla español">Free estimates · Se habla español</li></ul>
+        <ul><li><a href="tel:+14023012004">(402) 301-2004</a></li><li><a href="mailto:ramirezadolfo505@yahoo.com">ramirezadolfo505@yahoo.com</a></li><li>Omaha, NE</li><li data-es="Cotizaciones gratis · Se habla español" data-en="Free estimates · Se habla español">Free estimates · Se habla español</li></ul>
         <div class="stars" data-es="★★★★★ Cotizaciones gratis" data-en="★★★★★ Free estimates">★★★★★ Free estimates</div>
       </div>
     </div>
     <div class="foot-bot">
-      <div>© <span id="yr">2026</span> M.A.N Concrete and Landscaping · Omaha, NE</div>
+      <div>© <span id="yr">2026</span> M.A.N CONCRETE AND LANDSCAPING LLC · Omaha, NE</div>
       <div data-es="Sobre una base sólida." data-en="Built on a strong foundation.">Built on a strong foundation.</div>
     </div>
   </div>

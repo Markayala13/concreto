@@ -69,7 +69,7 @@
   color: var(--concrete-300);
   margin-top: 4px;
 }
-.brand .logo-sub b { color: var(--red); font-weight: 700; }
+.brand .logo-sub b { color: #ff5a4d; font-weight: 700; }
 
 /* Footer wordmark variant */
 .foot .logo { height: auto; margin-bottom: 20px; }
@@ -104,6 +104,42 @@
 @media (hover: none) {
   .gal figcaption { opacity: 1; transform: none; }
 }
+
+/* ---------- Video gallery ("Concrete in motion") ---------- */
+.vidgal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.vidgal figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--concrete-800, #1d1d1b);
+  border: 1px solid var(--line, rgba(0,0,0,.1));
+}
+.vidgal video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  background: #000;
+}
+.vidgal figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 16px;
+  background: linear-gradient(0deg, rgba(0,0,0,.82), transparent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.vidgal figcaption b { color: #ff5a4d; }
+@media (max-width: 860px) { .vidgal { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .vidgal { grid-template-columns: 1fr; } }
 
 /* ---------- Mobile polish ---------- */
 /* Keep the gallery at 2 columns on phones (base CSS drops to 1 = giant images) */
